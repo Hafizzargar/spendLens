@@ -16,7 +16,7 @@ When the user clicks "Run Audit," the backend initiates a **contextual estimatio
 ### The Feedback Experience
 Because deep audit estimation takes time, we implemented a **Detailed Loading State** to maintain engagement. It simulates a 1-100% progress flow while cycling through professional status updates:
 *   *Initializing Estimation Engine...*
-*   *Applying Procurement Benchmarks...*
+*   *Applying Industry-Trained Benchmarks...*
 *   *Analyzing Tool Redundancies...*
 
 ![Intelligent Loader](file:///C:/Users/hafez/.gemini/antigravity/brain/898c8a1e-07ec-4745-a53e-aa26281cf929/intelligent_loader_1778223054536.png)

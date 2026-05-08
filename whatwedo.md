@@ -1,6 +1,6 @@
-# Project Milestone: The AI Intelligence Evolution of SpendLens
+# Project Milestone: The AI-Assisted Evolution of SpendLens
 
-This document summarizes the strategic transformation of **SpendLens** from a rules-based calculator into a **Dynamic AI Research Engine** powered by Gemini 1.5.
+This document summarizes the strategic transformation of **SpendLens** from a rules-based calculator into an **AI-Assisted Spend Optimization Engine** powered by Gemini 1.5.
 
 ## 🧠 The Hybrid Architecture (The 4 Pillars)
 
@@ -11,7 +11,7 @@ We prioritize code over assumptions. All core math is calculated using a determi
 We use **Gemini 1.5** to bridge the gap between data and strategy, generating professional executive summaries from raw audit results.
 
 ### 3. Context-Aware Recommendations
-The system adapts to your team's workflow, using AI-assisted reasoning to identify tool overlaps and provide tailored procurement advice.
+The system adapts to your team's workflow, using AI-assisted reasoning to identify tool overlaps and provide tailored optimization advice.
 
 ### 4. Transparent Math Traceability
 We maintain maximum transparency by pairing every recommendation with a clear mathematical formula.
