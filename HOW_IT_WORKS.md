@@ -50,7 +50,7 @@ Every recommendation is backed by **Defensible Math**. We never show a number wi
 ---
 
 ## 5. Hybrid Architecture (Safety + Intelligence)
-1.  **Baseline Engine:** Calculations are performed using a **Deterministic Math Engine** to ensure 100% financial accuracy (No Hallucinations).
+1.  **Baseline Engine:** Calculations are performed using a **Deterministic Math Engine** to ensure **fully explainable financial reasoning** (No Hallucinations).
 2.  **AI-Assisted Research (Gemini 1.5):** The AI acts as a researcher, identifying 2024 discount benchmarks and tool overlaps.
 3.  **LLM-Powered Explanation:** Gemini generates the **Strategic Verdict** and professional reasoning to explain the "Why" behind the numbers.
 4.  **Data Harmonization:** The backend merges AI research with deterministic math for a final, defensible report.
