@@ -1,10 +1,9 @@
-# 🛡️ How SpendLens Works: AI Research & Procurement Engine
-
-SpendLens is a professional-grade AI spend optimization platform. This document walkthrough explains how the system transforms raw subscription data into a production-style AI spend auditing workflow.
+# 🛡️ How SpendLens Works: AI-Assisted Spend Auditing
+SpendLens is an AI-assisted spend auditing tool. This document walkthrough explains how the system transforms raw subscription data into a production-style AI spend auditing workflow.
 
 ---
 
-## 1. The Intelligent Input Form
+## 1. The Input Form
 Users enter their current AI tool stack, including seat counts and monthly pricing.
 *   **Context Awareness:** Users select their "Team Primary Focus" (Engineering, Marketing, etc.), which allows the AI to provide tailored advice (e.g., protecting specialized coding tools for developers).
 *   **Custom Tool Support:** The system recognizes both major vendors (OpenAI, Anthropic) and custom tools, which are categorized and benchmarked through AI-assisted reasoning.
@@ -14,14 +13,14 @@ Users enter their current AI tool stack, including seat counts and monthly prici
 ## 2. AI-Assisted Audit Reasoning
 When the user clicks "Run Audit," the backend initiates a **contextual estimation session** using **Gemini 1.5 Flash**.
 
-### The Progress Experience
-Because deep audit estimation takes time, we implemented an **Intelligent Loader** to maintain engagement. It simulates a 1-100% progress flow while cycling through professional status updates:
+### The Feedback Experience
+Because deep audit estimation takes time, we implemented a **Detailed Loading State** to maintain engagement. It simulates a 1-100% progress flow while cycling through professional status updates:
 *   *Initializing Estimation Engine...*
 *   *Applying Procurement Benchmarks...*
 *   *Analyzing Tool Redundancies...*
 
 ![Intelligent Loader](file:///C:/Users/hafez/.gemini/antigravity/brain/898c8a1e-07ec-4745-a53e-aa26281cf929/intelligent_loader_1778223054536.png)
-*Figure 1: The cinematic loading state providing real-time transparency into the AI's estimation process.*
+*Figure 1: The feedback-driven loading state providing real-time transparency into the AI's estimation process.*
 
 ---
 

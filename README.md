@@ -158,14 +158,14 @@ Relational databases such as PostgreSQL may provide stronger long-term analytics
 
 ---
 
-## 5. Why High-Polish UI & Motion Design?
+## 5. Why a Professional & Responsive Interface?
 
-The audit results page is designed to feel premium and shareable.
+The audit results page is designed to be clean, professional, and easy to interpret.
 
-The goal was to create a product users would trust enough to screenshot and share publicly.
+The goal was to create a sense of trust and clarity, ensuring that financial data is presented in a way that is immediately actionable for a reviewer.
 
 ### Tradeoff
-Animations and advanced UI styling increase frontend complexity and tuning effort.
+Building a detailed, responsive UI requires additional development time and careful state management.
 
 ---
 
