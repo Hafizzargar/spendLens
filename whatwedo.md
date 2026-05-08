@@ -2,13 +2,19 @@
 
 This document summarizes the strategic transformation of **SpendLens** from a rules-based calculator into a **Dynamic AI Research Engine** powered by Gemini 1.5.
 
-## 🧠 Hybrid Architecture (Accuracy + Intelligence)
+## 🧠 The Hybrid Architecture (The 4 Pillars)
 
-### 1. AI-Assisted Estimation & Reasoning
-We utilize **Gemini 1.5** as a specialized reasoning layer, while keeping financial logic deterministic.
-*   **Industry Benchmarking:** Every audit uses AI-assisted estimation to apply industry-trained enterprise discount ranges.
-*   **Price Rigidity Analysis:** The AI differentiates between "Rigid" vendors (like Microsoft) and "Challengers" (like Perplexity) to provide accurate negotiation leverage.
-*   **Redundancy Detection:** The engine automatically identifies overlapping tools (e.g., Claude vs. ChatGPT) and recommends consolidation strategies.
+### 1. Deterministic Finance Logic
+We prioritize code over assumptions. All core math is calculated using a deterministic engine to ensure consistent, defensible results.
+
+### 2. AI-Generated Human-Friendly Summaries
+We use **Gemini 1.5** to bridge the gap between data and strategy, generating professional executive summaries from raw audit results.
+
+### 3. Context-Aware Recommendations
+The system adapts to your team's workflow, using AI-assisted reasoning to identify tool overlaps and provide tailored procurement advice.
+
+### 4. Transparent Math Traceability
+We maintain maximum transparency by pairing every recommendation with a clear mathematical formula.
 
 ### 2. Intelligent Progress Experience
 To handle the "thinking time" required for AI research, we implemented a cinematic loading experience.

@@ -1,8 +1,8 @@
-# SpendLens: AI Spend Optimization Platform
+# SpendLens: AI-Assisted Spend Optimization
 
-SpendLens is a web-based AI spend optimization tool designed to help startups and technology teams identify redundant AI subscriptions, estimate cost-saving opportunities, and optimize software spending through deterministic, explainable audits.
+SpendLens is a professional-grade spend optimization tool that combines **deterministic finance logic** with **AI-generated human-friendly summaries** to help teams identify redundant subscriptions and optimize software spend with 100% transparent math.
 
-The platform analyzes AI tooling stacks such as ChatGPT, Claude, GitHub Copilot, Notion AI, and Copy.ai, then generates transparent optimization recommendations backed by mathematical reasoning rather than AI-generated assumptions.
+The platform uses a hybrid engine to analyze AI stacks, providing context-aware recommendations that are defensible, explainable, and financially sound.
 
 ---
 

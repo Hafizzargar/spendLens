@@ -49,11 +49,11 @@ Every recommendation is backed by **Defensible Math**. We never show a number wi
 
 ---
 
-## 5. Hybrid Architecture (Baseline First)
-1.  **Local Deterministic Baseline:** The **Frontend (Next.js)** immediately calculates a baseline audit locally. This ensures an instant, Mathematically accurate starting point (no latency, no hallucinations).
-2.  **AI-Assisted Enrichment (Gemini 1.5):** The **Backend (Express)** sends this baseline to Gemini for intelligence enrichment.
-3.  **Contextual Reasoning:** Gemini identifies tool overlaps and applies industry-trained benchmarks to provide the "Strategic Verdict."
-4.  **Final Harmonization:** The system merges the AI's reasoning with the local math for a final, defensible audit report.
+## 5. The Hybrid Architecture (The 4 Pillars)
+1.  **Deterministic Finance Logic:** All initial calculations are performed locally in the **Frontend (Next.js)** using fixed rules. This ensures that the foundation of your audit is mathematically sound and consistent.
+2.  **AI-Generated Human-Friendly Summaries:** The **Backend (Gemini 1.5)** acts as a communicator, transforming raw audit data into professional executive summaries that any stakeholder can understand.
+3.  **Context-Aware Recommendations:** The AI uses its industry-trained knowledge to identify tool redundancies and provide strategic advice based on your team's primary focus (e.g., protecting specialized engineering tools).
+4.  **Transparent Math:** Every final recommendation is paired with a clear formula (Seats × Discount % × Unit Price). This transparency ensures that the AI's "advice" is always verified by "fact."
 5.  **Persistence (MongoDB):** The final report is saved for audit traceability and lead generation.
 
 ---
