@@ -1,6 +1,6 @@
 # 🛡️ How SpendLens Works: AI Research & Procurement Engine
 
-SpendLens is a professional-grade AI spend optimization platform. This document walkthrough explains how the system transforms raw subscription data into high-fidelity procurement intelligence.
+SpendLens is a professional-grade AI spend optimization platform. This document walkthrough explains how the system transforms raw subscription data into a production-style AI spend auditing workflow.
 
 ---
 
@@ -58,4 +58,4 @@ Every recommendation is backed by **Defensible Math**. We never show a number wi
 
 ---
 
-**Status:** The system is fully operational and delivering production-grade procurement intelligence. 🚀🏆🥇
+**Status:** The system is fully operational and delivering a production-style AI spend auditing workflow. 🚀🏆🥇
