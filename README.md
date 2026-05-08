@@ -29,11 +29,12 @@ https://your-deployment-url.vercel.app
 
 # Key Features
 
-## 1. Hybrid Architecture (Accuracy + Intelligence)
+## 1. Hybrid Architecture (Baseline First)
 
-SpendLens uses a **Hybrid Engine** that combines a deterministic math layer with **Gemini 1.5 AI Estimation**.
+SpendLens uses a **Baseline-First Hybrid Engine** that prioritizes deterministic logic over AI assumptions.
 
-Instead of relying on LLM-generated math, the system uses a **Deterministic Math Engine** for financial accuracy, while Gemini acts as a reasoning layer to apply industry-trained benchmarks.
+*   **Foundation:** The **Frontend (Next.js)** calculates a baseline audit instantly using deterministic rules, ensuring mathematical accuracy and zero hallucination.
+*   **Enrichment:** The **Backend (Express)** then leverages **Gemini 1.5** as a reasoning layer to enrich the baseline with tool-overlap analysis and industry-trained benchmarks.
 
 ### Intelligence Layers:
 - **Price Rigidity Analysis:** Differentiates between "Established Incumbents" (low discount) and "Market Challengers" (high discount).

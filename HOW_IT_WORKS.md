@@ -7,7 +7,7 @@ SpendLens is a professional-grade AI spend optimization platform. This document 
 ## 1. The Intelligent Input Form
 Users enter their current AI tool stack, including seat counts and monthly pricing.
 *   **Context Awareness:** Users select their "Team Primary Focus" (Engineering, Marketing, etc.), which allows the AI to provide tailored advice (e.g., protecting specialized coding tools for developers).
-*   **Custom Tool Support:** The system recognizes both major vendors (OpenAI, Anthropic) and custom tools, which are researched in real-time by Gemini.
+*   **Custom Tool Support:** The system recognizes both major vendors (OpenAI, Anthropic) and custom tools, which are categorized and benchmarked through AI-assisted reasoning.
 
 ---
 
@@ -49,11 +49,11 @@ Every recommendation is backed by **Defensible Math**. We never show a number wi
 
 ---
 
-## 5. Hybrid Architecture (Safety + Intelligence)
-1.  **Baseline Engine:** Calculations are performed using a **Deterministic Math Engine** to ensure **fully explainable financial reasoning** (No Hallucinations).
-2.  **AI-Assisted Research (Gemini 1.5):** The AI acts as a researcher, identifying 2024 discount benchmarks and tool overlaps.
-3.  **LLM-Powered Explanation:** Gemini generates the **Strategic Verdict** and professional reasoning to explain the "Why" behind the numbers.
-4.  **Data Harmonization:** The backend merges AI research with deterministic math for a final, defensible report.
+## 5. Hybrid Architecture (Baseline First)
+1.  **Local Deterministic Baseline:** The **Frontend (Next.js)** immediately calculates a baseline audit locally. This ensures an instant, Mathematically accurate starting point (no latency, no hallucinations).
+2.  **AI-Assisted Enrichment (Gemini 1.5):** The **Backend (Express)** sends this baseline to Gemini for intelligence enrichment.
+3.  **Contextual Reasoning:** Gemini identifies tool overlaps and applies industry-trained benchmarks to provide the "Strategic Verdict."
+4.  **Final Harmonization:** The system merges the AI's reasoning with the local math for a final, defensible audit report.
 5.  **Persistence (MongoDB):** The final report is saved for audit traceability and lead generation.
 
 ---
