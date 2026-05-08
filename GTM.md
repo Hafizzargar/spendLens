@@ -9,9 +9,9 @@ SpendLens is designed primarily as an **"Engineering-as-Marketing"** tool. It ac
 
 ## 📈 Acquisition Channels
 
-### 1. Product-Led Growth (Virality)
-The core of our GTM is the **Shareable Public Audit**. 
-When a VP of Eng generates an audit that shows $15,000 in savings, they copy the URL (e.g., `/audit/12345`) and drop it in their `#leadership` Slack channel. Because the public audit page is beautifully formatted and requires no login, the rest of the executive team experiences the value instantly, driving organic, zero-CAC traffic back to SpendLens.
+### 1. Explainable ROI (Trust-Led Growth)
+The core of our GTM is **Defensible Savings**. 
+Unlike competitors who use AI to "guess" savings, SpendLens provides a **Math Breakdown** for every recommendation. When a VP of Eng generates an audit that shows $15,000 in savings, they don't just see a number—they see the logic (e.g., `25 seats × 20% discount`). This makes the report "CFO-ready" immediately, allowing the user to drop it in their `#leadership` Slack channel with 100% confidence. This "Explainability" is our primary viral trigger.
 
 ### 2. Micro-Influencers & "Roast My Stack"
 We will launch a campaign on Twitter/X and LinkedIn called **"Roast My AI Stack"**. 

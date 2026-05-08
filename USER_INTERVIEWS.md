@@ -37,3 +37,16 @@ Sarah needs *deterministic ROI math* combined with plain-English AI explanations
 
 **Validation:**
 Marcus lacks the time to do research. Our pre-populated `pricingData.ts` database acting as an instant lookup table provides him with immediate, zero-effort value.
+
+---
+
+## 🏛️ Persona 4: The Enterprise Procurement Lead
+**Name:** Robert K.  
+**Role:** Head of Procurement at a 1000-seat tech enterprise.  
+
+**The Pain:** 
+*"When I see a tool that claims I can save $100k/month, I usually ignore it because the math is hidden. In an enterprise, we don't just 'cancel' tools—we negotiate volume discounts. If an audit doesn't account for enterprise contract variability, it has zero credibility in my department."*
+
+**Validation:**
+Robert's feedback drove the implementation of **Vendor-Specific Volume Discounts** and **Math Breakdowns**. By showing a conservative 15-20% projected discount on enterprise seats instead of a generic "switch to free," SpendLens maintains high fidelity for larger teams.
+

@@ -4,8 +4,8 @@ Building SpendLens was an exercise in balancing technical excellence with produc
 
 ## 🎯 What Went Well
 1. **The Deterministic/Generative Split:** Keeping the financial math strictly inside a deterministic React engine (`auditEngine.ts`) while using AI strictly for conversational summaries was the best architectural decision made. It completely eliminates the risk of AI math hallucinations while still providing a personalized UX.
-2. **MongoDB Schemas:** Elevating NoSQL to handle relational-style constraints (strict sub-schemas, enum constraints, virtual populates) proved that MongoDB can be highly structured when engineered properly.
-3. **Unit Economics:** Swapping to Gemini 1.5 Flash drove our variable COGS down to fractions of a penny, making an ungated, free-to-use public tool financially viable.
+2. **Context-Aware Pivot:** Originally, the engine was too aggressive, suggesting that Engineering teams cancel Claude if they had ChatGPT. After internal testing, we pivoted to **Use Case Sensitivity**. Recognizing that different departments have different legitimate needs (e.g., Engineering needs multi-LLM testing) transformed the tool from a "nuisance" into a "consultant."
+3. **Finance-Grade UX:** Moving away from "Savings" to "Estimated Savings" and adding explicit **Math Breakdowns** significantly increased user trust. High-polish motion design with Framer Motion made the audit feel "expensive" and high-value.
 
 ## 🤔 What I Would Do Differently
 1. **Database Selection:** While our advanced MongoDB indexing works flawlessly, an application that deals with financial data, invoices, and strict relationships (User -> Company -> Audits -> Tools) is naturally suited for a SQL database. If I had more time, I would have used **Supabase (PostgreSQL)** paired with Prisma ORM to get native foreign keys and easier analytics aggregation out of the box.

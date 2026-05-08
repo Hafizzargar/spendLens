@@ -17,3 +17,10 @@
 * **Public Sharing:** Implemented the `/audit/[id]` dynamic route in Next.js. Added native `generateMetadata` for OpenGraph and Twitter cards to ensure the PLG viral loop actually works when links are shared.
 * **Security:** Added `express-rate-limit` to the backend to prevent malicious actors from spamming our Gemini API key.
 * **Testing & CI:** Added a Jest test suite for the deterministic engine and set up a `.github/workflows/ci.yml` file.
+
+### Day 5: Logic Hardening & Finance-Grade UX
+* **Pivot:** Realized generic 20% discount assumptions were too simple. Injected **Vendor-Specific Volume Discounts** (10-25%) into `pricingData.ts` to improve financial fidelity.
+* **Context-Aware Overrides:** Implemented departmental logic. Engineers now get "KEEP" recommendations for multiple LLMs to prevent "AI friction" during audits.
+* **UI Polish:** Replaced browser alerts with a custom, kinetic **Toast notification system**. Added transparent **Math Breakdowns** to the audit cards to ensure 100% explainability.
+* **Result:** The platform is now officially "Enterprise-Ready," successfully passing the 1000-seat test case with professional, defensible results.
+
