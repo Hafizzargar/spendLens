@@ -22,6 +22,7 @@ export interface AuditInput {
 
 export interface AuditResult {
   id: string;
+  useCase: 'engineering' | 'marketing' | 'mixed' | 'general';
   totalMonthlySpend: number;
   totalAnnualSpend: number;
   potentialMonthlySavings: number;
@@ -37,6 +38,7 @@ export interface Recommendation {
   toolName: string;
   action: 'cancel' | 'switch' | 'consolidate' | 'keep' | 'merge';
   message: string;
+  purpose?: string;
   savings: number;
   calculation?: string; // e.g. "10 seats × ($49 - $20) = $290/month"
   confidence?: 'High' | 'Medium' | 'Low';

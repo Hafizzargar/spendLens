@@ -17,10 +17,10 @@ interface ToolRowProps {
 
 export const ToolRow: React.FC<ToolRowProps> = ({ index, selectedToolId, seats, customName, customPrice, selectedToolIds, onUpdate, onRemove }) => {
   return (
-    <div className="flex flex-col gap-4 p-4 bg-secondary/50 rounded-xl transition-all hover:bg-secondary">
-      <div className="flex items-start gap-4">
+    <div className="flex flex-col gap-2 p-2.5 bg-secondary/50 rounded-xl transition-all hover:bg-secondary">
+      <div className="flex items-start gap-3">
         <div className="flex-1">
-          <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1 block">
+          <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-0.5 block">
             AI Tool
           </label>
           <select 
@@ -41,8 +41,8 @@ export const ToolRow: React.FC<ToolRowProps> = ({ index, selectedToolId, seats, 
           </select>
         </div>
 
-        <div className="w-24">
-          <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1 block">
+        <div className="w-16">
+          <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-0.5 block">
             Seats
           </label>
           <input 
@@ -50,16 +50,16 @@ export const ToolRow: React.FC<ToolRowProps> = ({ index, selectedToolId, seats, 
             min="1"
             value={seats}
             onChange={(e) => onUpdate(index, { seats: parseInt(e.target.value) || 1 })}
-            className="w-full bg-transparent border-none focus:ring-0 text-lg font-semibold"
+            className="w-full bg-transparent border-none focus:ring-0 text-base font-bold"
           />
         </div>
 
         <button 
           type="button"
           onClick={() => onRemove(index)}
-          className="p-2 text-muted-foreground hover:text-destructive transition-colors mt-5"
+          className="p-1.5 text-muted-foreground hover:text-destructive transition-colors mt-3"
         >
-          <Trash2 size={20} />
+          <Trash2 size={16} />
         </button>
       </div>
 

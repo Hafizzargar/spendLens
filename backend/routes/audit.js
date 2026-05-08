@@ -30,10 +30,20 @@ router.post('/', async (req, res) => {
     const activeModel = getModel();
     if (activeModel) {
       try {
-        const prompt = `You are a Senior SaaS Procurement Researcher. Analyze these tools: ${JSON.stringify(auditData.tools)}.
+        const prompt = `You are a Senior SaaS Procurement Researcher.
         
-        Your mission is to provide market-accurate 2024 enterprise volume discount estimates and tool classification.
-        For tools with 10+ seats, determine the most realistic discount percentage based on current SaaS procurement benchmarks.
+        CONTEXT:
+        Team Primary Focus: ${auditData.primaryFocus || 'General Business'}
+        Tool Stack: ${JSON.stringify(auditData.tools)}
+        
+        YOUR MISSION:
+        Provide market-accurate 2024 enterprise volume discount estimates and strategic tool classification.
+        For tools with 10+ seats, determine the most realistic discount percentage based on current SaaS benchmarks.
+        
+        CONTEXT-AWARE GUIDANCE:
+        If the team focus is 'Engineering', prioritize developer efficiency tools.
+        If 'Marketing', prioritize content velocity tools.
+        Adjust your reasoning based on how critical these tools are to this specific department.
         
         Return ONLY a JSON object with this structure:
         {
@@ -43,12 +53,12 @@ router.post('/', async (req, res) => {
               "toolId": "id-of-tool", 
               "discount": 0.15, 
               "purpose": "A 2-3 word uppercase purpose (e.g. 'NEURAL RESEARCH' or 'CODE ACCELERATION')",
-              "reasoning": "A professional procurement insight (e.g. 'At 100+ seats, this vendor typically offers 15-20% discounts to prevent churn.')" 
+              "reasoning": "A professional insight tailored to a ${auditData.primaryFocus || 'General Business'} team." 
             }
           ]
         }
         
-        If a tool is "custom", use your knowledge to identify its purpose. If unrecognized, use 'GENERAL AI'.`;
+        If a tool is "custom", identify its purpose. If unrecognized, use 'GENERAL AI'.`;
         
         console.log("-----------------------------------------");
         console.log("📤 GEMINI PROMPT:\n", prompt);
@@ -114,6 +124,7 @@ router.post('/', async (req, res) => {
     const audit = new Audit({
       ...auditData,
       uuid: auditData.id,
+      useCase: auditData.primaryFocus || 'general',
       aiSummary
     });
 

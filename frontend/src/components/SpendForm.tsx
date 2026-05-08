@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ToolRow } from './ToolRow';
-import { Plus, Calculator, Sparkles } from 'lucide-react';
+import { Plus, Calculator, Sparkles, RotateCcw } from 'lucide-react';
 import { calculateAudit } from '@/lib/auditEngine';
 import { AuditResult } from '@/types';
 import axios from 'axios';
@@ -46,6 +46,14 @@ export const SpendForm: React.FC<SpendFormProps> = ({ onResults, onLoading }) =>
     }
   };
 
+  const resetForm = () => {
+    setTools([
+      { toolId: '', seats: 1, customName: '', customPrice: 0 },
+      { toolId: '', seats: 1, customName: '', customPrice: 0 }
+    ]);
+    setUseCase('general');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -83,17 +91,17 @@ export const SpendForm: React.FC<SpendFormProps> = ({ onResults, onLoading }) =>
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto glass-card p-8 md:p-10"
+      className="max-w-2xl mx-auto glass-card p-6 md:p-6"
     >
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex flex-col gap-2 mb-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col gap-1 mb-2">
           <label className="text-sm font-bold text-foreground tracking-wide">
             Team Primary Focus
           </label>
           <select 
             value={useCase}
             onChange={(e) => setUseCase(e.target.value as any)}
-            className="w-full bg-secondary/50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary focus:outline-none font-medium"
+            className="w-full bg-secondary/40 border border-border/50 rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-primary/20 focus:border-primary focus:outline-none font-bold text-sm transition-all appearance-none cursor-pointer"
           >
             <option value="general">General Business (Operations, Sales, HR)</option>
             <option value="engineering">Engineering & Product Development</option>
@@ -127,21 +135,37 @@ export const SpendForm: React.FC<SpendFormProps> = ({ onResults, onLoading }) =>
           </AnimatePresence>
         </div>
 
-        <div className="flex gap-4">
-          <button
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <motion.button
+            whileHover={{ scale: 1.01, backgroundColor: 'rgba(var(--secondary), 0.8)' }}
+            whileTap={{ scale: 0.99 }}
             type="button"
             onClick={addTool}
-            className="flex-1 flex items-center justify-center gap-2 py-4 border-2 border-dashed border-muted-foreground/20 rounded-xl text-muted-foreground hover:border-primary hover:text-primary transition-all font-medium"
+            className="md:col-span-2 flex items-center justify-center gap-2 py-4 bg-secondary/40 border border-border/50 rounded-xl text-muted-foreground hover:text-foreground transition-all font-bold text-sm shadow-sm"
           >
-            <Plus size={20} />
+            <Plus size={18} />
             Add Another Tool
-          </button>
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
+            type="button"
+            onClick={resetForm}
+            className="flex items-center justify-center gap-2 py-4 bg-red-500/5 border border-red-500/10 rounded-xl text-red-500/70 hover:text-red-500 hover:bg-red-500/10 transition-all font-bold text-sm shadow-sm"
+            title="Clear Form"
+          >
+            <RotateCcw size={18} />
+            Clear
+          </motion.button>
+        </div>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="flex-1 bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+            className="w-full bg-primary text-primary-foreground py-3.5 rounded-xl font-bold text-base shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 flex items-center justify-center gap-2 group relative overflow-hidden"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             {isLoading ? (
               <Sparkles className="animate-spin" size={20} />
             ) : (
@@ -151,7 +175,6 @@ export const SpendForm: React.FC<SpendFormProps> = ({ onResults, onLoading }) =>
               </>
             )}
           </button>
-        </div>
       </form>
     </motion.div>
     

@@ -6,7 +6,7 @@ import { AuditResults } from '@/components/AuditResults';
 import { LeadCapture } from '@/components/LeadCapture';
 import { CredexCTA } from '@/components/CredexCTA';
 import { AuditResult } from '@/types';
-import { ShieldCheck, BarChart3, Coins, Sparkles } from 'lucide-react';
+import { ShieldCheck, BarChart3, Coins, Sparkles, ArrowLeft, RotateCcw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { IntroSequence } from '@/components/IntroSequence';
@@ -57,6 +57,11 @@ export default function Home() {
         {showIntro && <IntroSequence onComplete={handleIntroComplete} />}
       </AnimatePresence>
 
+      {/* Ambient Glow Elements */}
+      <div className="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="fixed bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-blue-500/5 blur-[100px] rounded-full pointer-events-none" />
+
+
       {/* Header */}
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2 font-black text-2xl tracking-tighter">
@@ -68,12 +73,19 @@ export default function Home() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           <a href="#" className="hover:text-foreground transition-colors">How it works</a>
           <a href="#" className="hover:text-foreground transition-colors">Pricing Data</a>
-          <a href="https://credex.ai" className="bg-secondary text-foreground px-4 py-2 rounded-lg hover:bg-secondary/80 transition-all">Back to Credex</a>
+          <motion.a 
+            whileHover={{ y: -1 }}
+            whileTap={{ y: 0 }}
+            href="https://credex.ai" 
+            className="bg-secondary/80 text-foreground px-5 py-2.5 rounded-xl font-bold text-xs border border-border/50 hover:bg-secondary hover:shadow-md transition-all uppercase tracking-wider"
+          >
+            Back to Credex
+          </motion.a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 pt-10 pb-8 text-center space-y-6 hero-gradient">
+      <section className="max-w-7xl mx-auto px-6 pt-4 pb-2 text-center space-y-4 hero-gradient">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -83,12 +95,12 @@ export default function Home() {
           AI SPEND AUDIT v2.0
         </motion.div>
         
-        <div className="space-y-4 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-foreground">
-            Stop overpaying for <span className="text-primary">AI Subscriptions.</span>
+        <div className="space-y-2 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-foreground">
+            Stop overpaying for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary animate-gradient-x">AI Subscriptions.</span>
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Audit your team's AI tool stack in 60 seconds. Identify redundancies, find cheaper alternatives, and cut your annual spend by up to 30%.
+          <p className="text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Audit your stack in 60 seconds. Identify redundancies and cut spend by up to 30%.
           </p>
         </div>
 
@@ -169,7 +181,7 @@ export default function Home() {
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.95, opacity: 0 }}
-                  className="w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-card border border-border shadow-2xl rounded-2xl relative"
+                  className="w-full max-w-6xl max-h-[95vh] overflow-y-auto bg-card border border-border shadow-2xl rounded-2xl relative"
                 >
                   {isGenerating ? (
                     <IntelligentLoader />
@@ -177,12 +189,30 @@ export default function Home() {
                     <div className="p-4 md:p-6 space-y-4">
                       <div className="flex justify-between items-center pb-2 border-b border-border">
                         <h2 className="text-xl font-bold">Audit Complete</h2>
-                        <button 
-                          onClick={() => setShowModal(false)}
-                          className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 bg-secondary rounded-md"
-                        >
-                          Close & Edit Stack
-                        </button>
+                        <div className="flex items-center gap-2">
+                          <motion.button 
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => {
+                              handleReset();
+                              setShowModal(false);
+                            }}
+                            className="flex items-center gap-2 text-xs font-bold text-red-500 hover:text-red-600 transition-all px-4 py-2 bg-red-50 hover:bg-red-100 border border-red-100 rounded-full shadow-sm"
+                          >
+                            <RotateCcw size={14} />
+                            Reset
+                          </motion.button>
+                          
+                          <motion.button 
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => setShowModal(false)}
+                            className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-all px-4 py-2 bg-secondary/50 hover:bg-secondary border border-border/50 rounded-full shadow-sm"
+                          >
+                            <ArrowLeft size={14} />
+                            Close & Edit Stack
+                          </motion.button>
+                        </div>
                       </div>
 
                       <AuditResults results={results} />
