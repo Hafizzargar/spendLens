@@ -29,11 +29,11 @@ https://your-deployment-url.vercel.app
 
 # Key Features
 
-## 1. Dynamic AI Research Engine
+## 1. Hybrid Architecture (Accuracy + Intelligence)
 
-SpendLens uses a **Gemini 1.5 Research Engine** to provide market-accurate procurement intelligence.
+SpendLens uses a **Hybrid Engine** that combines a deterministic math layer with **Gemini 1.5 AI Research**.
 
-Instead of relying on static spreadsheets, every audit triggers a live AI research session to identify 2024 enterprise discount ranges, price rigidity, and vendor-specific negotiation leverage.
+Instead of relying on LLM-generated math, the system uses a **Deterministic Math Engine** for financial accuracy, while Gemini acts as a live researcher to identify 2024 enterprise benchmarks.
 
 ### Intelligence Layers:
 - **Price Rigidity Analysis:** Differentiates between "Established Incumbents" (low discount) and "Market Challengers" (high discount).

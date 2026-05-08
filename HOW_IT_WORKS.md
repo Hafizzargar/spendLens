@@ -11,7 +11,7 @@ Users enter their current AI tool stack, including seat counts and monthly prici
 
 ---
 
-## 2. Deep Auditing (The Gemini Brain)
+## 2. AI-Assisted Audit Research
 When the user clicks "Run Audit," the backend initiates a live research session using **Gemini 1.5 Flash**.
 
 ### The Progress Experience
@@ -49,12 +49,12 @@ Every recommendation is backed by **Defensible Math**. We never show a number wi
 
 ---
 
-## 5. Technical Flow (Under the Hood)
-1.  **Frontend (Next.js):** Captures user data and calculates a "Baseline" audit locally.
-2.  **Backend (Express):** Receives the audit and constructs a high-context prompt for Gemini.
-3.  **AI Engine (Gemini 1.5):** Researches 2024 discount benchmarks and identifies tool overlaps.
-4.  **Data Harmonization:** The backend merges AI research with the baseline math to ensure 100% financial accuracy.
-5.  **Persistence (MongoDB):** The final report is saved with a unique ID for sharing.
+## 5. Hybrid Architecture (Safety + Intelligence)
+1.  **Baseline Engine:** Calculations are performed using a **Deterministic Math Engine** to ensure 100% financial accuracy (No Hallucinations).
+2.  **AI-Assisted Research (Gemini 1.5):** The AI acts as a researcher, identifying 2024 discount benchmarks and tool overlaps.
+3.  **LLM-Powered Explanation:** Gemini generates the **Strategic Verdict** and professional reasoning to explain the "Why" behind the numbers.
+4.  **Data Harmonization:** The backend merges AI research with deterministic math for a final, defensible report.
+5.  **Persistence (MongoDB):** The final report is saved for audit traceability and lead generation.
 
 ---
 

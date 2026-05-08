@@ -2,11 +2,11 @@
 
 This document summarizes the strategic transformation of **SpendLens** from a rules-based calculator into a **Dynamic AI Research Engine** powered by Gemini 1.5.
 
-## 🧠 Dynamic AI Research Engine
+## 🧠 Hybrid Architecture (Accuracy + Intelligence)
 
-### 1. Gemini-Driven Market Intelligence
-We replaced static, hardcoded rules with a live **Gemini 1.5 Research Engine**.
-*   **Real-time Benchmarking:** Every audit triggers a fresh research session to identify 2024 enterprise discount ranges.
+### 1. AI-Assisted Research & Reasoning
+We utilize **Gemini 1.5** as a specialized research layer, while keeping financial logic deterministic.
+*   **Expert Benchmarking:** Every audit uses AI-assisted research to identify current 2024 enterprise discount ranges.
 *   **Price Rigidity Analysis:** The AI differentiates between "Rigid" vendors (like Microsoft) and "Challengers" (like Perplexity) to provide accurate negotiation leverage.
 *   **Redundancy Detection:** The engine automatically identifies overlapping tools (e.g., Claude vs. ChatGPT) and recommends consolidation strategies.
 
