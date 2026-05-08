@@ -171,6 +171,7 @@ export const calculateAudit = (input: AuditInput): AuditResult => {
 
   return {
     id: uuidv4(),
+    useCase: input.useCase,
     totalMonthlySpend,
     totalAnnualSpend: totalMonthlySpend * 12,
     potentialMonthlySavings,
