@@ -11,13 +11,13 @@ Users enter their current AI tool stack, including seat counts and monthly prici
 
 ---
 
-## 2. AI-Assisted Audit Research
-When the user clicks "Run Audit," the backend initiates a live research session using **Gemini 1.5 Flash**.
+## 2. AI-Assisted Audit Reasoning
+When the user clicks "Run Audit," the backend initiates a **contextual estimation session** using **Gemini 1.5 Flash**.
 
 ### The Progress Experience
-Because real market research takes time, we implemented an **Intelligent Loader** to maintain engagement. It simulates a 1-100% progress flow while cycling through professional status updates:
-*   *Initializing Research Engine...*
-*   *Fetching 2024 Market Benchmarks...*
+Because complex audit estimation takes time, we implemented an **Intelligent Loader** to maintain engagement. It simulates a 1-100% progress flow while cycling through professional status updates:
+*   *Initializing Estimation Engine...*
+*   *Applying Procurement Benchmarks...*
 *   *Analyzing Tool Redundancies...*
 
 ![Intelligent Loader](file:///C:/Users/hafez/.gemini/antigravity/brain/898c8a1e-07ec-4745-a53e-aa26281cf929/intelligent_loader_1778223054536.png)

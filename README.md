@@ -31,9 +31,9 @@ https://your-deployment-url.vercel.app
 
 ## 1. Hybrid Architecture (Accuracy + Intelligence)
 
-SpendLens uses a **Hybrid Engine** that combines a deterministic math layer with **Gemini 1.5 AI Research**.
+SpendLens uses a **Hybrid Engine** that combines a deterministic math layer with **Gemini 1.5 AI Estimation**.
 
-Instead of relying on LLM-generated math, the system uses a **Deterministic Math Engine** for financial accuracy, while Gemini acts as a live researcher to identify 2024 enterprise benchmarks.
+Instead of relying on LLM-generated math, the system uses a **Deterministic Math Engine** for financial accuracy, while Gemini acts as a reasoning layer to apply industry-trained benchmarks.
 
 ### Intelligence Layers:
 - **Price Rigidity Analysis:** Differentiates between "Established Incumbents" (low discount) and "Market Challengers" (high discount).
@@ -114,7 +114,7 @@ The platform is intentionally designed to feel transparent and trustworthy for f
 
 ## 1. Why AI Research Instead of Static Rules?
 
-Static rules go stale the moment a SaaS vendor changes their pricing. SpendLens uses **Live AI Research** to ensure your audit is backed by current 2024 benchmarks and vendor strategies.
+Static rules go stale the moment a SaaS vendor changes their pricing. SpendLens uses **AI-Assisted Estimation** to ensure your audit is backed by industry-trained benchmarks and common procurement strategies.
 
 ### The Guardrail
 We use **JSON Mime-Type Enforcement** and **Math Traceability** to ensure the AI's research is always converted into accurate, defensible financial formulas.

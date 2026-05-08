@@ -9,9 +9,9 @@ export const IntelligentLoader = () => {
   const [statusIndex, setStatusIndex] = useState(0);
 
   const statuses = [
-    { text: "Initializing AI Research Engine...", icon: <Sparkles size={18} /> },
-    { text: "Searching for 2024 Market Benchmarks...", icon: <Search size={18} /> },
-    { text: "Analyzing Vendor Redundancies...", icon: <Brain size={18} /> },
+    { text: "Initializing AI Estimation Engine...", icon: <Sparkles size={18} /> },
+    { text: "Applying Procurement Benchmarks...", icon: <Search size={18} /> },
+    { text: "Analyzing Tool Redundancies...", icon: <Brain size={18} /> },
     { text: "Calculating Multi-seat Volume Discounts...", icon: <Calculator size={18} /> },
     { text: "Drafting Executive Savings Verdict...", icon: <ShieldCheck size={18} /> },
     { text: "Finalizing your Audit Report...", icon: <FileText size={18} /> },

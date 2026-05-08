@@ -82,10 +82,10 @@ router.post('/', async (req, res) => {
               const newSavings = Math.round((actualPrice * intel.discount) * seats);
               return {
                 ...rec,
-                message: `AI RESEARCH INSIGHT: ${intel.reasoning}`,
+                message: `AI ESTIMATE: ${intel.reasoning}`,
                 purpose: intel.purpose,
                 savings: newSavings,
-                calculation: `${seats} seats × ${Math.round(intel.discount * 100)}% AI-Researched discount on $${actualPrice} = $${newSavings}/mo`,
+                calculation: `${seats} seats × ${Math.round(intel.discount * 100)}% AI-Estimated discount on $${actualPrice} = $${newSavings}/mo`,
                 confidence: 'High'
               };
             } else if (rec.action === 'keep') {
