@@ -19,7 +19,42 @@ export const AuditResults: React.FC<AuditResultsProps> = ({ results }) => {
   };
 
   return (
-    <div className="space-y-4 max-w-4xl mx-auto">
+    <div className="space-y-6 max-w-4xl mx-auto">
+      {/* Strategic Verdict - The "TL;DR" for the user */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-secondary/30 border border-primary/20 p-6 rounded-2xl backdrop-blur-sm"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+            <Sparkles size={20} />
+          </div>
+          <div>
+            <h3 className="text-lg font-black tracking-tight">The Strategic Verdict</h3>
+            <p className="text-xs text-muted-foreground uppercase font-bold tracking-widest">Executive Summary</p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-3">
+            <p className="text-sm font-medium text-foreground/80 leading-relaxed">
+              Based on your <span className="font-bold text-primary">{results.tools.length > 0 ? results.tools[0].category : 'General'}</span> focus, your core "Power Stack" is optimized around <span className="font-bold">{results.tools.slice(0, 2).map(t => t.name).join(' and ')}</span>.
+            </p>
+            <div className="flex items-center gap-2 text-xs font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded">
+              <CheckCircle2 size={12} />
+              PRIMARY TOOLS CONFIRMED
+            </div>
+          </div>
+          <div className="border-l border-border pl-6 space-y-2">
+            <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Immediate Next Step</p>
+            <p className="text-sm font-bold leading-snug">
+              Do not cancel licenses. Instead, initiate <span className="text-primary">Enterprise Consolidation</span> for your 100+ seat subscriptions to unlock volume pricing.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Savings Card */}
         {results.potentialAnnualSavings > 0 ? (
@@ -113,8 +148,17 @@ export const AuditResults: React.FC<AuditResultsProps> = ({ results }) => {
                  <CheckCircle2 size={18} />}
               </div>
               <div className="flex-1">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="font-bold text-base">{rec.toolName}</span>
+                  {(rec.action === 'keep' || rec.action === 'consolidate') && (
+                    <span className="bg-amber-100 text-amber-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-amber-200">
+                      PRIMARY PLATFORM
+                    </span>
+                  )}
+                  {/* Purpose Badge - 100% AI Driven from Backend */}
+                  <span className="bg-blue-50 text-blue-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-blue-100">
+                    BEST FOR {rec.purpose || 'AI WORKFLOWS'}
+                  </span>
                   <ArrowRight size={14} className="text-muted-foreground" />
                   <span className="text-primary text-sm font-bold">{actionText[rec.action]}</span>
                 </div>
@@ -145,8 +189,12 @@ export const AuditResults: React.FC<AuditResultsProps> = ({ results }) => {
                 </div>
               </div>
               <div className="text-right whitespace-nowrap">
-                <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">Est. Savings</p>
-                <p className="text-base font-bold text-green-600">${rec.savings}/mo</p>
+                <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">
+                  {rec.savings === 0 ? 'Status' : 'Est. Savings'}
+                </p>
+                <p className={`text-base font-bold ${rec.savings === 0 ? 'text-blue-600' : 'text-green-600'}`}>
+                  {rec.savings === 0 ? 'OPTIMIZED' : `$${rec.savings}/mo`}
+                </p>
               </div>
             </motion.div>
           ))}

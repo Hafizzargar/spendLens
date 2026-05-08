@@ -19,8 +19,8 @@ app.use(express.json());
 const apiLimiter = require('./middleware/rateLimiter');
 
 // Routes
-app.use('/api/audit', apiLimiter, auditRoutes);
-app.use('/api/lead', apiLimiter, leadRoutes);
+app.use('/api/audit', auditRoutes); // Temporarily removed apiLimiter for testing
+app.use('/api/lead', leadRoutes);  // Temporarily removed apiLimiter for testing
 
 app.get('/', (req, res) => {
   res.send('SpendLens API is running...');

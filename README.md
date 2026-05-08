@@ -29,19 +29,24 @@ https://your-deployment-url.vercel.app
 
 # Key Features
 
-## 1. Deterministic Audit Engine
+## 1. Dynamic AI Research Engine
 
-SpendLens uses a deterministic TypeScript rules engine (`auditEngine.ts`) to calculate recommendations and savings.
+SpendLens uses a **Gemini 1.5 Research Engine** to provide market-accurate procurement intelligence.
 
-Instead of relying on LLMs for financial decisions, every recommendation is generated through transparent mathematical rules and pricing logic.
+Instead of relying on static spreadsheets, every audit triggers a live AI research session to identify 2024 enterprise discount ranges, price rigidity, and vendor-specific negotiation leverage.
 
-Example:
+### Intelligence Layers:
+- **Price Rigidity Analysis:** Differentiates between "Established Incumbents" (low discount) and "Market Challengers" (high discount).
+- **Redundancy Detection:** Automatically identifies overlapping capabilities across the AI stack.
+- **Dynamic Math:** Savings are calculated using researched benchmarks tailored to your specific team size.
 
-```text
-25 seats × 20% estimated volume discount on $20 = $100/month savings
-```
+---
 
-This improves transparency and reviewer trust while avoiding hallucinated financial outputs.
+## 2. Intelligent Progress Experience
+
+Because deep market research takes time, SpendLens features a cinematic loading experience:
+- **0-100% Progress Tracking:** Smooth simulation to maintain user engagement.
+- **Rotating Status Badges:** Professional audit updates (e.g., "Fetching Benchmarks," "Analyzing Redundancies").
 
 ---
 
@@ -107,14 +112,12 @@ The platform is intentionally designed to feel transparent and trustworthy for f
 
 # Product Decisions & Tradeoffs
 
-## 1. Why Deterministic Logic Instead of AI Math?
+## 1. Why AI Research Instead of Static Rules?
 
-LLMs are strong at summarization but unreliable for financial calculations.
+Static rules go stale the moment a SaaS vendor changes their pricing. SpendLens uses **Live AI Research** to ensure your audit is backed by current 2024 benchmarks and vendor strategies.
 
-SpendLens uses deterministic TypeScript logic for all pricing and recommendation calculations while limiting AI usage to executive summary generation only.
-
-### Tradeoff
-Pricing data requires manual maintenance and periodic updates.
+### The Guardrail
+We use **JSON Mime-Type Enforcement** and **Math Traceability** to ensure the AI's research is always converted into accurate, defensible financial formulas.
 
 ---
 
@@ -181,7 +184,8 @@ Animations and advanced UI styling increase frontend complexity and tuning effor
 - Mongoose
 
 ## AI Integration
-- Google Gemini API (summary generation only)
+- Google Gemini 1.5 API (Market Research & Reasoning)
+- JSON Mode (Deterministic Output Extraction)
 
 ## Email
 - Resend API

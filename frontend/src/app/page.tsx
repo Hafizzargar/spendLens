@@ -10,6 +10,7 @@ import { ShieldCheck, BarChart3, Coins, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { IntroSequence } from '@/components/IntroSequence';
+import { IntelligentLoader } from '@/components/IntelligentLoader';
 
 export default function Home() {
   const [results, setResults] = useState<AuditResult | null>(null);
@@ -171,11 +172,7 @@ export default function Home() {
                   className="w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-card border border-border shadow-2xl rounded-2xl relative"
                 >
                   {isGenerating ? (
-                    <div className="flex flex-col items-center justify-center py-32 space-y-6">
-                      <Sparkles className="w-12 h-12 text-primary animate-pulse" />
-                      <h2 className="text-2xl font-bold tracking-tight">Auditing your stack...</h2>
-                      <p className="text-muted-foreground">Gemini is analyzing your tools for redundancies.</p>
-                    </div>
+                    <IntelligentLoader />
                   ) : results && (
                     <div className="p-4 md:p-6 space-y-4">
                       <div className="flex justify-between items-center pb-2 border-b border-border">

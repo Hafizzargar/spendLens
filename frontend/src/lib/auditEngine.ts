@@ -40,7 +40,7 @@ export const calculateAudit = (input: AuditInput): AuditResult => {
           toolId: c.toolId,
           toolName: c.name || 'AI Tool',
           action: 'keep',
-          message: `Engineering/Mixed teams frequently use multiple LLMs (like ${c.name}) for cross-model testing and API development. Kept as justifiable spend.`,
+          message: `Engineering teams require ${c.name} for critical model-benchmarking and API integration testing. Standardizing here would hinder developer agility.`,
           savings: 0,
           confidence: 'High'
         });
@@ -127,11 +127,15 @@ export const calculateAudit = (input: AuditInput): AuditResult => {
       const existing = existingIndex !== -1 ? recommendations[existingIndex] : null;
 
       if (!existing || existing.action === 'keep') {
+        const categoryContext = t.category === 'chatbot' ? 'enterprise-wide chat assistants' : 
+                                t.category === 'coding' ? 'specialized engineering licenses' : 
+                                'team-wide AI subscriptions';
+
         const volumeRec = {
           toolId: t.toolId,
           toolName: t.name || 'AI Tool',
           action: 'consolidate' as const,
-          message: `You have ${t.seats} seats on an individual ${t.name} plan. Teams with 10+ seats should negotiate an Enterprise contract for a projected ${discount * 100}% volume discount based on vendor averages.`,
+          message: `You are currently paying for ${t.seats} individual ${t.name} licenses. Transitioning to an Enterprise contract for these ${categoryContext} would unlock a projected ${discount * 100}% volume discount and better security controls.`,
           savings: Math.round(savings),
           calculation: `${t.seats} seats × ${discount * 100}% volume discount on $${t.actualPrice} = $${Math.round(savings)}/mo`,
           confidence: 'Medium' as const

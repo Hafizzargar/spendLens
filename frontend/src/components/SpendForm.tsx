@@ -64,11 +64,12 @@ export const SpendForm: React.FC<SpendFormProps> = ({ onResults, onLoading }) =>
 
     try {
       // Save to backend
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:3001';
-      const response = await axios.post(`${apiUrl}/api/audit`, auditResults);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+      console.log("📡 Attempting to connect to Backend at:", apiUrl);
+      const response = await axios.post(`${apiUrl}/api/audit`, auditResults, { timeout: 60000 });
       onResults(response.data);
     } catch (error) {
-      console.error("Failed to save audit:", error);
+      console.error("❌ Failed to save audit to backend:", error);
       // Fallback to local results if backend is down
       onResults(auditResults);
     } finally {

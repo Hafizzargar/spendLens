@@ -9,22 +9,21 @@ SpendLens is designed primarily as an **"Engineering-as-Marketing"** tool. It ac
 
 ## 📈 Acquisition Channels
 
-### 1. Explainable ROI (Trust-Led Growth)
-The core of our GTM is **Defensible Savings**. 
-Unlike competitors who use AI to "guess" savings, SpendLens provides a **Math Breakdown** for every recommendation. When a VP of Eng generates an audit that shows $15,000 in savings, they don't just see a number—they see the logic (e.g., `25 seats × 20% discount`). This makes the report "CFO-ready" immediately, allowing the user to drop it in their `#leadership` Slack channel with 100% confidence. This "Explainability" is our primary viral trigger.
+### 1. AI Research Authority (Trust-Led Growth)
+The core of our GTM is **Defensible Intelligence**. 
+Unlike competitors who use simple calculations, SpendLens provides **Deep AI Research Insights**. When a VP of Eng sees an audit that identifies Perplexity as a "Market Challenger" or GitHub as having "Price Rigidity," they perceive the tool as a professional consultant. This "Intelligence Edge" makes the report "Board-ready" immediately.
 
-### 2. Micro-Influencers & "Roast My Stack"
+### 2. High-Perceived Value (The "Deep Research" Wait)
+We leverage the **"Intelligent Loader"** to build anticipation. By showing the user that the AI is "Fetching 2024 Market Benchmarks" and "Analyzing Redundancies," we increase the perceived value of the final report. This makes the conversion to a "Lead" much more likely because the user feels they have just received $500 worth of consulting for free.
+
+### 3. "Roast My Stack" (Social Virality)
 We will launch a campaign on Twitter/X and LinkedIn called **"Roast My AI Stack"**. 
-Founders love talking about the tools they use. By sharing their SpendLens audit screenshots (with automatically generated OpenGraph Twitter Cards), we tap into founder vanity. The tool natively "roasts" redundant tools (e.g., "You have Jasper and ChatGPT? Cancel Jasper."), creating engaging social content.
-
-### 3. SEO (Programmatic)
-We will leverage our `pricingData.ts` to generate programmatic SEO pages in the future:
-* `/compare/chatgpt-plus-vs-claude-pro`
-* `/alternatives/expensive-ai-tools`
-These pages will drive organic search traffic directly into the audit funnel.
+Founders love sharing their "Power Stacks." By sharing their SpendLens audit screenshots, they trigger conversations about tool redundancy. The tool's ability to detect overlaps (e.g., "Cancel Claude because you already have ChatGPT") creates "Controversial/High-Engagement" social content.
 
 ## 🛤️ The Funnel
-1. **Awareness:** Twitter Card / Shared Audit Link.
-2. **Activation:** Completing a 60-second audit (No Login Required = High Conversion).
-3. **Capture:** Entering an email to "Send this report to my CFO" or "Book a consultation with Credex to execute these savings".
-4. **Monetization:** Credex closes the B2B lead.
+1. **Awareness:** Social Media Share / "Roast My Stack" Post.
+2. **Engagement:** Entering the AI Stack into the 60-second form.
+3. **Anticipation:** The "Intelligent Loader" experience (Building trust in the AI's research).
+4. **Activation:** Viewing the AI-generated Strategic Verdict.
+5. **Capture:** Entering an email to "Send this full Intelligence Report to my CFO."
+6. **Monetization:** Credex closes the high-value B2B procurement lead.
